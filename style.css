@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Games;
+    src: url(font/Games.ttf);
+}
+
+@font-face {
+    font-family: VictorisaBold;
+    src: url(font/VICTORISADEMOBold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +15,16 @@
     background-color: beige;
 }
 
+h1 {
+    font-family: Games;
+    margin: 20px;
+}
+
 .root-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 70vh;
 }
 
 #board {
@@ -18,6 +32,7 @@
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     width: 400px;
+    height: 400px;
 }
 
 .square {
@@ -41,4 +56,68 @@
 
 .controls {
     margin-top: 30px;
+}
+
+button {
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+#start-button {
+    background-color: #4CAF50;
+    padding: 10px 20px; 
+    border: none; 
+    transition: background-color 0.3s ease;
+  }
+  
+#start-button:hover {
+    background-color: #45a049;
+  }
+  
+#start-button:active {
+    background-color: #3e8e41; 
+    transform: scale(0.98);
+  }
+  
+
+#restart-button {
+    background-color: #008CBA;
+    padding: 10px 20px;
+    border: 2px solid #007B9E;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+#restart-button:hover {
+    background-color: #007B9E;
+    color: #E0F7FF;
+  }
+  
+#restart-button:active {
+    background-color: #005F73;
+    transform: scale(0.98);
+  }
+
+  
+.inputs input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.inputs input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+#message {
+    margin-top: 30px;
+    font-family: VictorisaBold;
+    font-size: 40px;
 }
