@@ -11,6 +11,10 @@ const Gameboard = (() => {
         })
         // improved
         document.getElementById('board').innerHTML = DOMboard;
+        const squares = document.getElementsByClassName('square')
+        Array.from(squares).forEach(square =>{
+            square.addEventListener('click', GameController.handleClick)
+        })
     }
 
     return {
@@ -43,8 +47,13 @@ const GameController = (() => {
         isGameOver = false;
         Gameboard.render();
     }
+
+    const handleClick = (e) => {
+        console.log(e.target.id)
+    }
     return {
         start,
+        handleClick
     }
 })()
 
