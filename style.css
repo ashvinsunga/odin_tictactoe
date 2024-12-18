@@ -37,7 +37,6 @@ h1 {
 
 .square {
     display: flex;
-    flex-wrap: wrap;
     height: 120px;
     background-color: lightgreen;
     border: 1px solid brown;
