@@ -54,6 +54,9 @@ h1 {
 }
 
 .controls {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     margin-top: 30px;
 }
 
@@ -119,4 +122,5 @@ button {
     margin-top: 30px;
     font-family: VictorisaBold;
     font-size: 40px;
+    
 }
